@@ -16,7 +16,7 @@ namespace A1_Logistics
 
         public ClientLogic()
         {
-            datasource = new DataSource();
+            datasource = DataSource.GetInstance;
         }
 
         public void UpdateClient(int id, string firstName, string lastname, string cnp, string address, string icn)

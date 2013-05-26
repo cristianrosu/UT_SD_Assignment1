@@ -8,9 +8,22 @@ namespace A1_DataSource
 {
     public class DataSource
     {
-        public DataSource()
+        private static DataSource instance;
+        private DataSource()
         {
             DB_Entities = new Bank_DBEntities();
+        }
+
+        public static DataSource GetInstance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DataSource();
+                }
+                return instance;
+            }
         }
 
         protected Bank_DBEntities DB_Entities
@@ -32,8 +45,9 @@ namespace A1_DataSource
 
         public List<Client> getClients()
         {
-            return (from c in DB_Entities.Clients
+            List<Client> clients = (from c in DB_Entities.Clients
                     select c).ToList();
+            return clients;
         }
 
         public Client updateClient(int id, string firstName, string lastname, string cnp, string address, string icn)

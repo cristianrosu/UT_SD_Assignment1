@@ -14,7 +14,7 @@ namespace A1_Logistics
 
         public MainLogic()
         {
-            datasource = new DataSource();
+            datasource = DataSource.GetInstance;
         }
 
 

@@ -130,9 +130,9 @@
             // 
             // clientId2
             // 
-            this.clientId2.Location = new System.Drawing.Point(484, 166);
+            this.clientId2.Location = new System.Drawing.Point(400, 244);
             this.clientId2.Name = "clientId2";
-            this.clientId2.Size = new System.Drawing.Size(100, 20);
+            this.clientId2.Size = new System.Drawing.Size(22, 20);
             this.clientId2.TabIndex = 5;
             // 
             // MainForm

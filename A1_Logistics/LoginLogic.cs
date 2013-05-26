@@ -13,7 +13,7 @@ namespace A1_Logistics
 
         public LoginLogic()
         {
-            datasource = new DataSource();
+            datasource = DataSource.GetInstance;
         }
 
         public int userType(string username, string password)

@@ -39,6 +39,7 @@ namespace Assignment1
             {
                 dataGridView1.Rows.Add(new string[] {c.ID.ToString(), c.FirstName, c.LastName, c.CNP, c.Address });
             }
+            UpdateSelectedId();
         }
 
         private void btn_add_client_Click(object sender, EventArgs e)

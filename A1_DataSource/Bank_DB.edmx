@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Bank_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Bank_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="Bank_DBModelStoreContainer">
           <EntitySet Name="Accounts" EntityType="Bank_DBModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Clients" EntityType="Bank_DBModel.Store.Clients" store:Type="Tables" Schema="dbo" />
@@ -120,8 +120,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Bank_DBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -252,60 +251,59 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Bank_DBModelStoreContainer" CdmEntityContainer="Bank_DBEntities">
-          <EntitySetMapping Name="Accounts">
-            <EntityTypeMapping TypeName="Bank_DBModel.Account">
-              <MappingFragment StoreEntitySet="Accounts">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Currency" ColumnName="Currency" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Clients">
-            <EntityTypeMapping TypeName="Bank_DBModel.Client">
-              <MappingFragment StoreEntitySet="Clients">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="CNP" ColumnName="CNP" />
-                <ScalarProperty Name="ICN" ColumnName="ICN" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Transactions">
-            <EntityTypeMapping TypeName="Bank_DBModel.Transaction">
-              <MappingFragment StoreEntitySet="Transactions">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="FromAccountID" ColumnName="FromAccountID" />
-                <ScalarProperty Name="ToAccountID" ColumnName="ToAccountID" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="Bank_DBModel.User">
-              <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Bank_DBModelStoreContainer" CdmEntityContainer="Bank_DBEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="IsTypeOf(Bank_DBModel.Account)">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(Bank_DBModel.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CNP" ColumnName="CNP" />
+          <ScalarProperty Name="ICN" ColumnName="ICN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="IsTypeOf(Bank_DBModel.Transaction)">
+        <MappingFragment StoreEntitySet="Transactions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FromAccountID" ColumnName="FromAccountID" />
+          <ScalarProperty Name="ToAccountID" ColumnName="ToAccountID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(Bank_DBModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
