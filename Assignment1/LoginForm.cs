@@ -37,10 +37,11 @@ namespace Assignment1
             {
                 main_form = new MainForm();
             }
-            //if (userType == 1)
-            //{
-            //    main_form = new AdminForm();
-            //}
+
+            if (userType == 1)
+            {
+                main_form = new AdminForm();
+            }
 
 
            

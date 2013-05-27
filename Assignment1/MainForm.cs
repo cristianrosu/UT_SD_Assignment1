@@ -85,5 +85,11 @@ namespace Assignment1
                     }
             }
         }
+
+        private void btn_view_accounts_Click(object sender, EventArgs e)
+        {
+            Form accountsForm = new AccountsForm(clientId);
+            accountsForm.Show();
+        }
     }
 }

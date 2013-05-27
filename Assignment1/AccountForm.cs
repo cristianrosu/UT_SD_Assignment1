@@ -12,9 +12,17 @@ namespace Assignment1
 {
     public partial class AccountForm : Form
     {
+        private int clientId;
+
         public AccountForm()
         {
             InitializeComponent();
+        }
+
+        public AccountForm(int clientId)
+        {
+            InitializeComponent();
+            this.clientId = clientId;
         }
     }
 }

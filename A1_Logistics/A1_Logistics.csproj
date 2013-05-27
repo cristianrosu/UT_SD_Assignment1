@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountLogic.cs" />
+    <Compile Include="AdminLogic.cs" />
     <Compile Include="ClientLogic.cs" />
     <Compile Include="LoginLogic.cs" />
     <Compile Include="MainLogic.cs" />

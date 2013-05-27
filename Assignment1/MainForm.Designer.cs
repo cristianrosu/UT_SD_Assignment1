@@ -63,6 +63,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -127,6 +128,7 @@
             this.btn_view_accounts.TabIndex = 4;
             this.btn_view_accounts.Text = "View Accounts";
             this.btn_view_accounts.UseVisualStyleBackColor = true;
+            this.btn_view_accounts.Click += new System.EventHandler(this.btn_view_accounts_Click);
             // 
             // clientId2
             // 

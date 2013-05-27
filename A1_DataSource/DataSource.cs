@@ -102,6 +102,24 @@ namespace A1_DataSource
             DB_Entities.SaveChanges();
 
         }
+
+        public int SaveAccount(Account account)
+        {
+            DB_Entities.Accounts.Add(account);
+            DB_Entities.SaveChanges();
+
+            return account.ID;
+        }
+
+        public void DeleteAccount(int accountId)
+        {
+            Account account = (from a in DB_Entities.Accounts
+                               where a.ID == accountId
+                               select a).FirstOrDefault();
+            DB_Entities.Accounts.Remove(account);
+
+            DB_Entities.SaveChanges();
+        }
     }
 
 }

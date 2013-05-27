@@ -15,6 +15,6 @@ namespace A1_POCO
         public string CNP { get; set; }
         public string ICN { get; set; }
 
-        public virtual ICollection<AccountPOCO> Accounts { get; set; }
+        public ICollection<AccountPOCO> Accounts { get; set; }
     }
 }
